@@ -17,10 +17,10 @@ import (
 )
 
 var (
-	flagDebugMode     = flag.Bool("debug-mode", false, "")
-	flagDBPath        = flag.String("db-path", ":memory:", "")
-	flagListen        = flag.String("listen", ":8080", "")
-	flagLogLevel      = zap.LevelFlag("log-level", zap.InfoLevel, "")
+	flagDebugMode     = flag.Bool("debug-mode", false, "enable gin debug mode")
+	flagDBPath        = flag.String("db-path", ":memory:", "sqlite file path")
+	flagListen        = flag.String("listen", ":8080", "<IP:PORT> address to listen")
+	flagLogLevel      = zap.LevelFlag("log-level", zap.InfoLevel, "zap log level")
 )
 
 func init() {
